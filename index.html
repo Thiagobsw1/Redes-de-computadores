@@ -993,6 +993,158 @@
         </li>
         <hr>         
     </ol>
+
     
+    
+    <h2  class="aulas">Aula 14</h2>
+    <ol>
+
+        <li class="perguntas"> 
+            As redes de computadores devem ser capazes de transferir dados de um dispositivo a outro com precisão, porém sabe-se que erros ocorrem, então as redes devem ser capazes de detectar e corrigir esses erros. Quanto aos principais possíveis erros que podem ocorrer na transmissão de dados, analise as alternativas e assinale aquela que mostra os principais tipos de erros que podem corromper dados durante a transmissão.
+            
+            
+            <ol start="3">
+                <li type="A">
+                    <p class="resposta">Erro de bit e erro de rajada.</p>
+                    <p class="justificativa">Esses são os dois principais erros responsáveis por corromper dados. Independentemente de ocorrer falha em apenas um bit ou uma rajada deles, ao ocorrer já teremos dados corrompidos.</p>
+                </li>
+            </ol>
+        </li>
+        <hr> 
+        
+        
+        <li class="perguntas"> Quanto aos principais erros que podem corromper os dados durante a transmissão em redes, qual deles é o que tem maior probabilidade de ocorrer?
+            
+            
+            <ol start="2">
+                <li type="A">
+                    <p class="resposta">Erro de rajada.</p>
+                    <p class="justificativa">Os erros de bits e erros de rajada são os responsáveis por corromper dados em uma transmissão em redes, sendo que o erro de rajada tem maior probabilidade, pois, sempre que há uma interferência, ela tem uma duração maior do que um único bit, atingindo assim um conjunto de bits.</p>
+                </li>
+            </ol>
+        </li>
+        <hr> 
+                
+
+        <li class="perguntas"> 
+            Para detectar e corrigir erros, as redes de computadores se valem de alguns conceitos, a fim de garantir a entrega confiável de dados. Analise as alternativas e assinale aquela que expõe o principal conceito envolvido para detecção e correção de erros na transmissão de dados em redes.
+            
+            
+            <ol start="4">
+                <li type="A">
+                    <p class="resposta">Redundância de bits.</p>
+                    <p class="justificativa">Para sermos capazes de detectar ou corrigir erros, precisamos enviar alguns bits extras redundantes junto com os dados. Esses bits redundantes são acrescentados pelo emissor e posteriormente retirados pelo receptor. Sua presença possibilita que o receptor detecte ou corrija bits corrompidos.</p>
+                </li>
+            </ol>
+        </li>
+        <hr> 
+            
+
+        <li class="perguntas"> 
+            Quanto às formas de detecção de erros, uma delas é normalmente utilizada na internet por vários protocolos, sendo assim, sua atuação não está vinculada à camada de enlace. Assinale a alternativa CORRETA quanto à forma de detecção de erros que não está vinculada à camada de enlace.
+            
+            <ol start="1">
+                <li type="A">
+                    <p class="resposta">Checksum.</p>
+                    <p class="justificativa">O Checksum pode ser verificado nas camadas de redes e transporte do modelo OSI.</p>
+                </li>
+            </ol>
+        </li>
+        <hr> 
+        
+
+        <li class="perguntas">
+            Existem dois principais métodos para correção de erros: correção antecipada e correção por retransmissão. Marque a alternativa C0RRETA quanto às principais características desses métodos.
+            
+            <ol start="1">
+                <li type="A">
+                    <p class="resposta">Na correção antecipada de erros, o receptor tenta adivinhar a mensagem pelo uso de bits redundantes. Na correção de erros por retransmissão, o receptor detecta a ocorrência de um erro e solicita ao emissor para reenviar a mensagem. O reenvio é repetido até́ a mensagem chegar no receptor livre de erros.</p>
+                    <p class="justificativa">Essas características estão corretas, porém vale ressaltar que a correção antecipada ocorrerá se a quantidade de erros for pequena; e, na correção por retransmissão, normalmente nem todos os erros são detectados.</p>
+                </li>
+            </ol>
+        </li>
+        <hr>         
+    </ol>
+    
+
+
+
+    
+    <h2  class="aulas">Aula 15</h2>
+    <ol>
+
+        <li class="perguntas"> 
+            A camada de enlace, intermediária à camada física e à camada de rede, que possui algumas funções muito específicas quanto à correção de erros e à comunicação ponto a ponto entre dispositivos. Analise as alternativas e assinale a que expõe CORRETAMENTE as duas principais funções da camada de enlace de dados.
+            
+            
+            <ol start="1">
+                <li type="A">
+                    <p class="resposta">Controle do enlace de dados e controle de acesso ao meio de transmissão.</p>
+                    <p class="justificativa">O controle do enlace de dados trata do projeto e dos procedimentos para comunicação confiável entre dois nós, enquanto o controle de acesso ao meio de transmissão trata de como compartilhar um enlace físico (link) de dados.</p>
+                </li>
+            </ol>
+        </li>
+        <hr> 
+        
+        
+        <li class="perguntas"> 
+            Uma das funções do controle de enlace de dados é a montagem e a delimitação de frames, conhecida como framing. Dentre as características do framing, há as formas como ele pode ser apresentado. Identifique qual a alternativa que mostra as duas formas que podem apresentar o framing.
+            
+            
+            <ol start="5">
+                <li type="A">
+                    <p class="resposta">Framing de tamanho fixo e framing de tamanho variável.</p>
+                    <p class="justificativa">O framing pode ter seu tamanho fixo ou variável, sendo que no tamanho variável, pode ser orientado a bit ou orientado a caracter.</p>
+                </li>
+            </ol>
+        </li>
+        <hr> 
+                
+
+        <li class="perguntas"> 
+            Um dos problemas a serem resolvidos pela camada de enlace é definir quando há o início e o fim de uma mensagem que chega em forma binária. Uma das formas de realizar esse controle seria a inserção de um flag (um padrão de bits) quando trata-se de protocolos orientados a caractere. Porém, nem tudo fica resolvido, pois o padrão do flag pode aparecer no meio dos dados, causando confusão. Nos protocolos orientados a bit, sempre que um padrão de flag aparece no meio dos dados, é acrescido um único bit para diferenciar padrão de bits e flag. Por exemplo, acrescenta-se um bit 0 toda vez que, nos dados, aparecerem cinco 1s consecutivos após 0, de modo que o receptor não confunda o padrão 0111110 com um flag. Essa técnica é chamada de:
+            
+            
+            <ol start="5">
+                <li type="A">
+                    <p class="resposta">
+                        Bit-stuffing</p>
+                    <p class="justificativa">Essa é a técnica correta. Na inserção de bit, se forem encontrados 1 bit 0 e cinco bits 1s consecutivos, será acrescentado um bit 0 extra. Esse bit extra enxertado é eliminado dos dados no final pelo receptor.</p>
+                </li>
+            </ol>
+        </li>
+        <hr> 
+            
+
+        <li class="perguntas"> 
+            Uma das funções da camada de enlace é o controle de erros, que se refere tanto à detecção quanto à correção de erros. Geralmente, o controle de erros na camada de enlace é implementado de forma simples: toda vez que um erro for detectado, os frames especificados são retransmitidos. Esse processo de retransmissão de frames é chamado de:
+            
+            <ol start="5">
+                <li type="A">
+                    <p class="resposta">ARQ</p>
+                    <p class="justificativa">O ARQ (Automatic Repeat Request) é uma solicitação de repetição automática executada na camada de enlace.</p>
+                </li>
+            </ol>
+        </li>
+        <hr> 
+        
+
+        <li class="perguntas">
+            A camada de enlace pode combinar framing, controle de fluxo e controle de erros para garantir a entrega de dados de um nó a outro, sendo que os protocolos da camada de enlace têm uma importante função nesse processo. Para discussão e estudo dos protocolos da camada de enlace, eles são divididos em dois grandes grupos, porém, um deles não é usado na prática. Analise as alternativas e assinale a que expõe CORRETAMENTE o grupo de protocolos de cada enlace que não é usado na vida real.
+            
+            <ol start="1">
+                <li type="A">
+                    <p class="resposta">Protocolos para canais sem ruído.</p>
+                    <p class="justificativa">Essa é a categoria de protocolos que não se aplica à vida real, pois é sabido que não há canais de comunicação sem ruído. Por menor que possa ser, sempre haverá algum tipo de interferência.
+
+                        
+                    </p>
+                </li>
+            </ol>
+        </li>
+        <hr>         
+    </ol>
+    
+
 </body>
 </html>
