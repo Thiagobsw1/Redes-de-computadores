@@ -1144,7 +1144,152 @@
         </li>
         <hr>         
     </ol>
+
+
+
+    <h2  class="aulas">Aula 16</h2>
+    <ol>
+
+        <li class="perguntas"> 
+            A partir da rede IPv4 192.168.0.0/16, podemos ter 65.536 endereços IPs. Esse resultado se dá a partir da multiplicação das 256 combinações possíveis do terceiro octeto com as 256 combinações do quarto octeto. Entretanto, desse total de endereços, temos de desconsiderar dois deles que não podem ser utilizados para endereçar dispositivos. Um desses endereços que não podem ser utilizados refere-se à identificação da rede, e tem o (zero) nos seus últimos octetos. Analise as alternativas e marque aquela que expõe o próximo endereço que não pode ser utilizado e sua respectiva função nessa rede.
+            
+            
+            <ol start="5">
+                <li type="A">
+                    <p class="resposta">192.168.255.255, que representa o endereço de broadcast da rede.</p>
+                    <p class="justificativa">O exemplo usado nessa questão refere-se a uma rede classe B, sendo assim, o endereço mais alto da rede (com o 255 nos últimos octetos que representam hosts da rede) é utilizado para broadcast, que é para onde serão enviados todos os pacotes de dados que necessitam atingir todos os hosts dessa rede.</p>
+                </li>
+            </ol>
+        </li>
+        <hr> 
+        
+        
+        <li class="perguntas"> 
+            Os endereços IPv4 na internet estão se esgotando, porém uma das funcionalidades que auxiliou na manutenção dessa versão de endereçamento IP por um longo período foi o uso de NAT (tradução de endereços de rede). Assinale a alternativa que expõe corretamente a função do NAT.
+            
+            
+            <ol start="3">
+                <li type="A">
+                    <p class="resposta">O NAT tem a função de traduzir endereços IP privados em endereços públicos de internet</p>
+                    <p class="justificativa">Sempre que um host em uma rede privada envia pacotes para a internet, o NAT executa a função de traduzir o endereço IP privado para o endereço público de internet fornecido pelo ISP. Essa funcionalidade permite que inúmeros hosts de uma rede privada possam acessar a internet por meio de um único IP válido de internet.</p>
+                </li>
+            </ol>
+        </li>
+        <hr> 
+                
+
+        <li class="perguntas"> 
+            A utilização de sub-redes permite que uma rede IPv4 possa ser dividida em blocos de endereços lógicos. Essa é uma alternativa utilizada pelos provedores de internet para minimizar o desperdício de endereços IP na internet. Essa divisão se dá a partir da alteração da máscara de rede que define a quantidade de redes em que um bloco original foi dividido e, da mesma forma, a quantidade de endereços IP em cada uma das redes. Um exemplo de divisão de rede seria uma máscara /31 que no formato decimal representa a máscara de rede 255.255.255.254. Apesar de esse exemplo estar correto, na prática ele não poderia ser utilizado em uma rede, por quê?
+            
+            
+            <ol start="4">
+                <li type="A">
+                    <p class="resposta">Com uma máscara /31 teremos apenas dois endereços IP disponíveis, dessa forma, um deles será a identificação da rede e o outro a identificação de broadcast dessa rede.</p>
+                    <p class="justificativa">Em uma divisão de rede em que se utilizam 31 bits para a identificação de rede, resta somente 1 bit para identificação de endereço IP. Dessa forma, um IP será a identificação da rede e o outro a identificação de broadcast dessa rede, não havendo nenhum endereço IP válido para identificar host nessa rede.</p>
+                </li>
+            </ol>
+        </li>
+        <hr> 
+            
+
+        <li class="perguntas"> 
+            Determinada rede de computadores possui seu endereçamento IP com o seguinte bloco: 10.0.0.0/8. Um dos servidores dessa rede possui o endereço 10.0.10.1/8. Identifique, entre as alternativas abaixo, o endereço IP que não poderia ser utilizado para endereçar um host na rede, sendo que este host tem a necessidade de acessar recursos desse servidor.
+            
+            <ol start="5">
+                <li type="A">
+                    <p class="resposta">IP: 10.1.10.10. Máscara: 255.255.0.0.</p>
+                    <p class="justificativa">Apesar de o conceito de hierarquia de endereços IP permitir que hosts com máscara de rede diferente possam manter conexão, nessa alternativa o segundo octeto não permitirá essa conexão.</p>
+                </li>
+            </ol>
+        </li>
+        <hr> 
+        
+
+        <li class="perguntas">
+            Com o esgotamento dos endereços IPv4, já estão sendo utilizados pelos provedores de internet os endereços IPv6, que permitirá uma quantidade significativamente maior de endereços IP na internet. Analise as alternativas e assinale aquela que expõe corretamente as principais diferenças entre os conceitos de IPv4 e IPv6.
+            
+            <ol start="4">
+                <li type="A">
+                    <p class="resposta">Os endereços IPv4 são compostos por 32 bits e são representados no formato decimal, enquanto os endereços IPv6 são compostos por 128 bits e são representados no formato hexadecimal.</p>
+                    <p class="justificativa">Correto, as afirmações estão de acordo com as características de ambas as versões. Dessa forma é possível verificar que um número com o comprimento de 128 bits possui uma quantidade infinitamente maior de endereços possíveis com comprimento de 32 bits.</p>
+                </li>
+            </ol>
+        </li>
+        <hr>         
+    </ol>
     
+
+    
+    <h2  class="aulas">Aula 17</h2>
+    <ol>
+
+        <li class="perguntas"> 
+            Os protocolos da camada de transporte podem ser orientados ou não orientados à conexão, sendo que esta é uma das características que definem se esse protocolo realiza uma entrega confiável dos dados. Analise as alternativas e marque a que mostra o protocolo da camada de transporte que NÃO é orientado à conexão.
+            
+            
+            <ol start="5">
+                <li type="A">
+                    <p class="resposta">UDP</p>
+                    <p class="justificativa">Diferentemente do TCP e SCTP, o UDP não estabelece conexão entre os hosts.</p>
+                </li>
+            </ol>
+        </li>
+        <hr> 
+        
+        
+        <li class="perguntas"> 
+            Há um protocolo da camada de transporte em que a transferência dos dados entre os hosts consiste em três fases: estabelecimento da conexão, transferência de dados e encerramento da conexão. Essa é uma característica de qual protocolo?
+            
+            
+            <ol start="2">
+                <li type="A">
+                    <p class="resposta">TCP.</p>
+                    <p class="justificativa">O protocolo TCP é orientado à conexão, justamente, contemplando essas três fases de estabelecimento da conexão, transferência de dados e encerramento da conexão.</p>
+                </li>
+            </ol>
+        </li>
+        <hr> 
+                
+
+        <li class="perguntas"> 
+            O SCTP tem características similares aos protocolos UDP e TCP, porém há uma principal funcionalidade que os difere dos demais protocolos da camada de transporte. Assinale a alternativa que expõe a funcionalidade que difere o SCTP do UDP e do TCP.
+            
+            
+            <ol start="5">
+                <li type="A">
+                    <p class="resposta">Transferência de dados multihoming.</p>
+                    <p class="justificativa">Esse é o recurso que distingue o SCTP do UDP e do TCP. A funcionalidade de multihoming permite que ambas as extremidades definam vários endereços IP para comunicação. Entretanto, apenas um desses endereços pode ser definido como endereço primário.</p>
+                </li>
+            </ol>
+        </li>
+        <hr> 
+            
+
+        <li class="perguntas"> 
+            O SCTP une características dos outros dois protocolos da camada de transporte, em que o fato de ser orientado à conexão foi herdado do TCP. Identifique a alternativa que expõe CORRETAMENTE a característica que o SCTP herdou do protocolo UDP.
+            
+            <ol start="4">
+                <li type="A">
+                    <p class="resposta">Orientação a mensagens.</p>
+                    <p class="justificativa">Essa é a característica que o SCTP herdou do UDP, em que uma mensagem é totalmente independente da outra, diferentemente do TCP.</p>
+                </li>
+            </ol>
+        </li>
+        <hr> 
+        
+
+        <li class="perguntas">
+            Um protocolo orientado a bytes recebe uma ou mais mensagens de um processo, as armazena na forma de um fluxo de bytes e as transmite em segmentos, e os delimitadores das mensagens não são preservados. Identifique entre as alternativas qual é o único protocolo da camada de transportes que é orientado a bytes.
+            
+            <ol start="4">
+                <li type="A">
+                    <p class="resposta">TCP.</p>
+                    <p class="justificativa">Esse é o único protocolo da camada de transporte que é orientado a bytes. Os demais são orientados a mensagens.</p>
+                </li>
+            </ol>
+        </li>
+        <hr>         
+    </ol>
 
 </body>
 </html>
